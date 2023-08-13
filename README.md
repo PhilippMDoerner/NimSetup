@@ -7,4 +7,4 @@ If you encounter `[[]]`, those are Obsidian links not getting resolved.
 
 ## Guide-List:
 - [Github Project Setup](./Github%20Project%20Setup.md)
-- [Github Project Maintenance](./Github%20Project%20Setup.md)
+- [Github Project Maintenance](./Github%20Project%20Maintenance.md)
