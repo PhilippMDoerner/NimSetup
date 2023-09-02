@@ -1,6 +1,6 @@
----
-tags: nim, docs
----
+___
+tags: [nim](nim.md), [documentation](documentation.md), [nim-docs](nim-docs.md)
+___
 You can link within your doc comments! 
 This helps users traverse your documentation easier!
 

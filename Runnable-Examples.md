@@ -1,7 +1,9 @@
----
-tags: nim, docs, project, setup
----
-[Docs](https://nim-lang.org/docs/system.html#runnableExamples%2Cstring%2Cuntyped)
+___
+tags: [nim](nim.md), [documentation](documentation.md), [nim-docs](nim-docs.md)
+Updated: `=this.file.mtime`
+Created :  2023-09-02 - 10:26
+___
+[](https://nim-lang.org/docs/system.html#runnableExamples%2Cstring%2Cuntyped)
 
 Example: 
 ```
