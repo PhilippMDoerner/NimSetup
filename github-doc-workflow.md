@@ -1,5 +1,9 @@
+---
+Created: 2023-09-02T11:06
+Updated: 2023-09-13T19:48
+---
 ___
-tags: [nim](nim.md), [nim-docs](nim-docs.md)
+hubs: [nim](nim.md), [nim-docs](nim-docs.md)
 Created: 2023-09-02 - 11:06
 Updated: `=this.file.mtime`
 ___
@@ -24,7 +28,7 @@ permissions:
   pages: write
   id-token: write
 
-# Execute a job called "api-docs" for nim version 1.6.10
+# Execute a job called "api-docs" for nim version 2.0.0
 jobs:
   api-docs:
 	runs-on: ubuntu-latest
