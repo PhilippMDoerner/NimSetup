@@ -1,6 +1,6 @@
 ---
 Created: 2023-09-02T11:06
-Updated: 2023-09-13T19:48
+Updated: 2023-09-17T08:39
 ---
 ___
 hubs: [nim](nim.md), [nim-docs](nim-docs.md)
@@ -28,7 +28,7 @@ permissions:
   pages: write
   id-token: write
 
-# Execute a job called "api-docs" for nim version 2.0.0
+# Execute a job called "api-docs"
 jobs:
   api-docs:
 	runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
 	  - uses: actions/checkout@v3
 	  - uses: jiro4989/setup-nim-action@v1
 		with:
-		  nim-version: '1.6.10'
+		  nim-version: '<Your Nim version, typically 1.6.12 or 2.0.0>'
 
 	  - run: nimble install -Y
 	  
