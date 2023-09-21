@@ -1,9 +1,13 @@
+---
+Created: 2023-09-02T11:03
+Updated: 2023-09-21T17:13
+---
 ___
-tags: [github](github.md), [maintenance](maintenance.md)
+hubs: [github](github.md), [maintenance](maintenance.md)
 Created: 2023-09-02 - 11:03
 Updated: `=this.file.mtime`
 ___
-Dependabot is a [feature provided by github](https://docs.github.com/en/code-security/dependabot) that allows monitoring your project and auto-updating your dependencies.
+Dependabot is a [feature provided by github](https://docs.github.com/en/code-security/dependabot) that allows monitoring your project and auto-updating the actions you use etc.
 
 The following is an example `dependabot.yml`: 
 ```

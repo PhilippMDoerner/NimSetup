@@ -1,5 +1,9 @@
+---
+Created: 13-08-2023 08:12:11 am
+Updated: 2023-09-21T17:13
+---
 ___
-tags: [github](github.md), [nim](nim.md)
+hubs: [github](github.md), [nim](nim.md)
 Updated: `=this.file.mtime`
 Created :  2023-09-02 - 10:31
 ___
@@ -18,25 +22,31 @@ This is important in order to generate good reference documentation for your use
 It is also recommended to [link in doc-comments](Nim%20Doc%20Linking.md) to other procs/symbols that are relevant for a given proc.
 
 ## Step 2: Set up nimble doc-generation task
-See: [generate nim documentation](generate%20nim%20documentation.md)
+[See here](generate%20nim%20documentation.md) for a guide on how to set one up.
 
 ## Step 3 (Optional): Set up introductory documentation for newcomers
 Docs generated from doc-comments in your source code are highly useful, but mostly as reference documentation.
 
-Refer to [documentation](documentation.md) for types of documentation.
-Consider [nimibook](nimibook.md) to write documentation with examples that can compile.
+You can also write [other kinds of documentation](documentation.md) e.g. to explain the individual features of the package and their architecture better. 
 
-## Step 4 (Optional): Set up test-calling task 
+Consider [nimibook](nimibook.md) to write such documentation, as you can write examples similar to [runnable examples](Runnable-Examples.md) that get compiled and have everything in a structure overview.
+
+## Step 4: Enable github pages on your github repository
+Go to Settings => Environments look for a, or create a, github pages environment.
+Under `Deployment branches` add your main branch.
+## Step 5 (Optional): Set up test-calling task 
 Only needed if you have complex test setups that e.g. involve containers or testing a GUI, otherwise just use `nimble test`.
 Can't give general advice here, as that is highly project specific.
 
-## Step 5: Set up a github test workflow
-Create a  .github folder and add the following workflows:
+## Step 6: Set up github workflows
+To enable automatic compilation + deployment of your docs and automatic execution of your tests, setup github workflows.
+
+Create a  .github folder and add the following workflow-files:
 - [github-test-workflow](github-test-workflow.md)
 - [dependabot-workflow](dependabot-workflow.md)
 - [github-doc-workflow](github-doc-workflow.md)
 
-## Step 6: Publish Package
-In order to make it findable in the [nimble directory](https://nimble.directory) and make it so users can easily install your package via package managers, you need to publish your packages.
+## Step 7: Publish Package
+In order to make it find-able in the [nimble directory](https://nimble.directory) and make it so users can easily install your package via package managers, you need to publish your packages.
 
 Follow the guidelines provided by [How to publish a nim package](How%20to%20publish%20a%20nim%20package.md)

@@ -1,6 +1,6 @@
 ---
 Created: 2023-09-02T11:06
-Updated: 2023-09-17T08:39
+Updated: 2023-09-21T17:16
 ---
 ___
 hubs: [nim](nim.md), [nim-docs](nim-docs.md)
@@ -13,14 +13,16 @@ The idea is to [compile your docs](generate%20nim%20documentation%20) via a [nim
 That `_site` folder is then deployed to github pages.
 Below is a template for a workflow, placeholders are marked with `<>`.
 
+Remember to add your main branch to the github-pages Environment on settings => Environment.
+
 ```
 name: github pages
 
 # Execute this workflow only for Pushes to your main branch, not for PRs
 on:
   push:
-	branches:
-	  - main
+    branches:
+      - main
 
 # Provides the implicitly used and hidden GITHUB_TOKEN the necessary permissions to deploy github_pages
 permissions:
@@ -33,9 +35,12 @@ jobs:
   api-docs:
 	runs-on: ubuntu-latest
 	steps:
-	  - uses: actions/checkout@v3
-	  - uses: jiro4989/setup-nim-action@v1
-		with:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup nim
+        uses: jiro4989/setup-nim-action@v1
+        with:
 		  nim-version: '<Your Nim version, typically 1.6.12 or 2.0.0>'
 
 	  - run: nimble install -Y
@@ -62,12 +67,12 @@ jobs:
   
   # Deploy _site directory with permissions of GITHUB_TOKEN
   deploy:
-	environment:
-	  name: github-pages
-	runs-on: ubuntu-latest
-	needs: api-docs
-	steps:
-	  - name: Deploy to GitHub Pages
-		id: deployment
-		uses: actions/deploy-pages@v1
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    needs: api-docs
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 ```
