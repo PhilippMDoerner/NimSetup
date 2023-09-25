@@ -1,6 +1,6 @@
 ---
 Created: 2023-09-02T11:06
-Updated: 2023-09-21T17:16
+Updated: 2023-09-25T19:53
 ---
 ___
 hubs: [nim](nim.md), [nim-docs](nim-docs.md)
@@ -36,7 +36,7 @@ jobs:
 	runs-on: ubuntu-latest
 	steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Setup nim
         uses: jiro4989/setup-nim-action@v1
@@ -62,7 +62,7 @@ jobs:
 		  cp -r <"docFolder">/* _site
 	  
 	  - name: Upload  _site directory for deploy job
-		uses: actions/upload-pages-artifact@v1 # This will automatically upload an artifact from the '/_site' directory
+		uses: actions/upload-pages-artifact@v2 # This will automatically upload an artifact from the '/_site' directory
    
   
   # Deploy _site directory with permissions of GITHUB_TOKEN
@@ -74,5 +74,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
 ```

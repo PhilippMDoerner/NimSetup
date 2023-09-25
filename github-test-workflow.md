@@ -1,5 +1,9 @@
+---
+Created: 2023-09-02T09:58
+Updated: 2023-09-25T19:53
+---
 ___
-tags: [github](github.md), [maintenance](maintenance.md), [nim](nim.md)
+hubs: [github](github.md), [maintenance](maintenance.md), [nim](nim.md)
 Created: 2023-09-02 - 10:58
 Updated: `=this.file.mtime`
 ___
@@ -45,8 +49,8 @@ jobs:
     name: Nim ${{ matrix.nimversion }} - ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: iffy/install-nim@v4
+      - uses: actions/checkout@v4
+      - uses: iffy/install-nim@v5
         with:
           version: ${{ matrix.nimversion }}
         env:
