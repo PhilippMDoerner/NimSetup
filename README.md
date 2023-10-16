@@ -7,5 +7,5 @@ Note: Not all links in the files will work, mostly links in tags.
 They are missing as they have no actual information for this repository (such as `nim.md`). Anything with actual content will be present.
 
 ## Guide-List:
-- [How to set up a nim project on github](./Github%20Project%20Setup.md)
+- [How to set up a nim project on github](./Nim%20Project%20Setup%20on%20Github.md)
 - [How to update a nim package version](./Github%20Project%20Maintenance.md)
